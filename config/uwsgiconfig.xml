@@ -1,0 +1,8 @@
+<uwsgi>
+     <pythonpath>/home/ubuntu/project/restdemo</pythonpath>
+     <module>run</module>
+     <callable>app</callable>
+     <socket>127.0.0.1:3031</socket>
+     <master/>
+     <memory-report/>
+</uwsgi>
