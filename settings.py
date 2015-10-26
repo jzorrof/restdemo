@@ -128,6 +128,18 @@ works = {
     }
 }
 
+picture = {
+    'item_title': 'pic'
+    'picturename': {
+        'type': 'string',
+        'required': True,
+    },
+    'picturenurl': {
+        'type': 'url'
+        'required': True
+    }
+}
+
 # The DOMAIN dict explains which resources will be available and how they will
 # be accessible to the API consumer.
 DOMAIN = {
