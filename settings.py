@@ -130,14 +130,15 @@ works = {
 
 picture = {
     'item_title': 'pic',
-
-    'picturename': {
-        'type': 'string',
-        'required': True,
-    },
-    'picturenurl': {
-        'type': 'string',
-        'required': True,
+    'schema':{
+        'picturename': {
+            'type': 'string',
+            'required': True,
+        },
+        'picturenurl': {
+            'type': 'string',
+            'required': True,
+        }
     }
 }
 
