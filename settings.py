@@ -136,7 +136,7 @@ picture = {
         'required': True,
     },
     'picturenurl': {
-        'type': 'url',
+        'type': 'string',
         'required': True,
     }
 }
