@@ -130,6 +130,7 @@ works = {
 
 picture = {
     'item_title': 'pic',
+
     'schema':{
         'picturename': {
             'type': 'string',
@@ -138,7 +139,7 @@ picture = {
         'picturenurl': {
             'type': 'string',
             'required': True,
-        }
+        },
     }
 }
 
