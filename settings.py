@@ -129,7 +129,7 @@ works = {
 }
 
 picture = {
-    'item_title': 'pic'
+    'item_title': 'pic',
     'picturename': {
         'type': 'string',
         'required': True,
