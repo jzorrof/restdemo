@@ -146,4 +146,5 @@ picture = {
 DOMAIN = {
     'people': people,
     'works': works,
+    'picture': picture,
 }
