@@ -4,7 +4,7 @@ import bcrypt
 from eve import Eve
 from eve.auth import BasicAuth
 
-# app = Eve()
+app = Eve()
 
 class BCryptAuth(object):
     """docstring for BCryptAuth"""
@@ -16,7 +16,8 @@ class BCryptAuth(object):
             account = accounts.find_one({'username':username})
             return account and \
                 bcrypt.hashpwd(password, account['password']) == account['password']
+app = Eve(auth=BCryptAuth)
+
 
 if __name__ == '__main__':
-    app = Eve(auth=BCryptAuth)
     app.run()
