@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+
+from eve import Eve
 from eve.auth import BasicAuth
 
 class MyBasicAuth(BasicAuth):
