@@ -16,8 +16,7 @@ class BCryptAuth(object):
             account = accounts.find_one({'username':username})
             return account and \
                 bcrypt.hashpwd(password, account['password']) == account['password']
-app = Eve(auth=BCryptAuth)
-
 
 if __name__ == '__main__':
-    app.run()
+	app = Eve(auth=BCryptAuth)
+    app.run(host='0.0.0.0')
