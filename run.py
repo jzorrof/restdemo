@@ -11,7 +11,7 @@ class BCryptAuth(object):
 	def check_auth(self, username, password, allowed_roles):
 		if resource == 'accounts':
             return username == 'superuser' and password == 'password'
-        else
+        else:
 			accounts = app.data.drive.db['accounts']
 			account = accounts.find_one({'username':username})
 			return account and \
