@@ -8,7 +8,7 @@ app = Eve()
 
 class BCryptAuth(object):
     """docstring for BCryptAuth"""
-    def check_auth(self, username, password, allowed_roles):
+    def check_auth(self, username, password, allowed_roles,methods):
         if resource == 'accounts':
             return username == 'superuser' and password == 'password'
         else:
@@ -16,6 +16,7 @@ class BCryptAuth(object):
             account = accounts.find_one({'username':username})
             return account and \
                 bcrypt.hashpwd(password, account['password']) == account['password']
+
 if __name__ == '__main__':
     app = Eve(auth=BCryptAuth)
     app.run()
