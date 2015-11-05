@@ -5,8 +5,6 @@ import bcrypt
 from eve import Eve
 from eve.auth import BasicAuth
 
-app = Eve()
-
 class BCryptAuth(object):
     """docstring for BCryptAuth"""
     def check_auth(self, username, password, allowed_roles,methods):
@@ -18,6 +16,6 @@ class BCryptAuth(object):
             return account and \
                 bcrypt.hashpwd(password, account['password']) == account['password']
 
-if __name__ == '__main__':
-	app = Eve(auth=BCryptAuth)
+if __name__ == '__main__': 
+    app = Eve(auth=BCryptAuth)
     app.run(host='0.0.0.0',port=int(os.environ.get('PORT')))
