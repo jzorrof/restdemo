@@ -2,7 +2,7 @@
      <pythonpath>/home/ubuntu/project/restdemo</pythonpath>
      <module>run</module>
      <callable>app</callable>
-     <socket>127.0.0.1:5000</socket>
+     <socket>127.0.0.1:3030</socket>
      <master/>
      <memory-report/>
 </uwsgi>
