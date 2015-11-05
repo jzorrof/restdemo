@@ -4,7 +4,7 @@ import bcrypt
 from eve import Eve
 from eve.auth import BasicAuth
 
-app = Eve()
+# app = Eve()
 
 class BCryptAuth(object):
     """docstring for BCryptAuth"""
