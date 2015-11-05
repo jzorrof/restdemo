@@ -169,11 +169,6 @@ accounts = {
             'type': 'string',
             'required': True,
         },
-        'roles': {
-            'type': 'list',
-            'allowed': ['user', 'superuser', 'admin'],
-            'required': True,
-        },
     },
 }
 
