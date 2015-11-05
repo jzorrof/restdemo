@@ -10,7 +10,7 @@ class BCryptAuth(object):
 		accounts = app.data.drive.db['accounts']
 		account = accounts.find_one({'username':username})
 		return account and \
-			bcrypt.hashpwd(password, account['password']) = account['password']
+			bcrypt.hashpwd(password, account['password']) == account['password']
 
 
 if __name__ == '__main__':
