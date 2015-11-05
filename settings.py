@@ -143,10 +143,42 @@ picture = {
     }
 }
 
+accounts = {
+
+    # the standard account entry point is defined as
+    # '/accounts/<ObjectId>'. We define  an additional read-only entry
+    # point accessible at '/accounts/<username>'.
+    'additional_lookup': {
+        'url': 'regex("[\w]+")',
+        'field': 'username',
+    },
+
+    # We also disable endpoint caching as we don't want client apps to
+    # cache account data.
+    'cache_control': '',
+    'cache_expires': 0,
+
+    # Finally, let's add the schema definition for this endpoint.
+    'schema': schema,
+
+    schema = {
+            'username': {
+            'type': 'string',
+            'required': True,
+            'unique': True,
+            },
+        'password': {
+            'type': 'string',
+            'required': True,
+        },
+    }
+}
+
 # The DOMAIN dict explains which resources will be available and how they will
 # be accessible to the API consumer.
 DOMAIN = {
     'people': people,
     'works': works,
     'picture': picture,
+    'accounts': accounts,
 }
