@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import os
 import bcrypt
 from eve import Eve
 from eve.auth import BasicAuth
@@ -19,4 +20,4 @@ class BCryptAuth(object):
 
 if __name__ == '__main__':
 	app = Eve(auth=BCryptAuth)
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0',port=int(os.environ.get('PORT')))
