@@ -159,19 +159,17 @@ accounts = {
     'cache_expires': 0,
 
     # Finally, let's add the schema definition for this endpoint.
-    'schema': schema,
-
-    schema = {
-            'username': {
+    'schema': {
+        'username': {
             'type': 'string',
             'required': True,
             'unique': True,
-            },
+        },
         'password': {
             'type': 'string',
             'required': True,
         },
-    }
+    },
 }
 
 # The DOMAIN dict explains which resources will be available and how they will

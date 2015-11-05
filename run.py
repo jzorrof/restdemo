@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import bcrypt
 from eve import Eve
 from eve.auth import BasicAuth
