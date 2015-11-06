@@ -50,6 +50,9 @@ people = {
     # 'title' tag used in item links.
     'item_title': 'person',
 
+    'public_methods': ['GET'],
+    'public_item_methods': ['GET'],
+
     # by default the standard item entry point is defined as
     # '/people/<ObjectId>/'. We leave it untouched, and we also enable an
     # additional read-only entry point. This way consumers can also perform GET
@@ -180,11 +183,6 @@ accounts = {
 # The DOMAIN dict explains which resources will be available and how they will
 # be accessible to the API consumer.
 DOMAIN = {
-    'people': {
-        'public_methods': ['GET'],
-        'public_item_methods': ['GET'],
-    },
-
     'people': people,
     'works': works,
     'picture': picture,
