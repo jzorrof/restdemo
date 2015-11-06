@@ -28,8 +28,6 @@ import os
 # MONGO_PASSWORD = os.environ.get('MONGO_PASSWORD', 'user')
 # MONGO_DBNAME = os.environ.get('MONGO_DBNAME', 'evedemo')
 
-PUBLIC_METHODS = ['GET']
-PUBLIC_ITEM_METHODS = ['GET']
 
 # Enable reads (GET), inserts (POST) and DELETE for resources/collections
 # (if you omit this line, the API will default to ['GET'] and provide
@@ -185,11 +183,6 @@ DOMAIN = {
     'people': {
         'public_methods': ['GET'],
         'public_item_methods': ['GET'],
-    },
-
-    'invoices': {
-        'public_methods': [],
-        'public_item_methods': [],
     },
 
     'people': people,
